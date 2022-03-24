@@ -1,0 +1,9 @@
+# .bash_prompt
+function git_branch() {
+  s=$(git branch --no-color 2>/dev/null | sed -ne "s/^\* \(.*\)$/\1/p")
+  if [ ! "$s" = "" ]; then
+    echo '('$s')'
+  fi
+}
+export PS1='\n\[\033[0;36m\][\u@\h \[\033[0;33m\]\w\[\033[0;36m\]]\[\033[0;32m\]$(git_branch)\[\033[0m\]$ '
+
