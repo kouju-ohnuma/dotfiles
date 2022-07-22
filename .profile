@@ -46,3 +46,9 @@ if [ -d "$HOME/.local/bin" ] ; then
 else
     echo "skip .local/bin PATH"
 fi
+
+# setup for mac OS
+if [ "$(uname)" == 'Darwin' ]; then
+    exec -f "$HOME/mac/.macrc" 
+fi
+eval "$(nodenv init -)"
