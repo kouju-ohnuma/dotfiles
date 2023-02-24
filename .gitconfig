@@ -11,6 +11,8 @@
 	ch = checkout
 	chb = checkout -b
 	b = branch
+	rom = rebase origin/master
+	cm = commit -m
 	ca = commit --amend
 	can = commit --amend --no-edit
     graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
